@@ -27,7 +27,9 @@ The learnings should be practical - tools that companies actually use.
 
 
 ## Accomplishments
-##### **to be added**
+- scoped the module and what should be included
+- scoped tasks that could be used for learning
+- practice pitching :)
 
 
 ## Lessons learned
