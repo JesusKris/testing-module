@@ -16,7 +16,7 @@ TODO: theoretical intro
 
 ## Objectives
 
-You are given a sample calculator function in the resources [](). Write unit tests covering the functionality of the calculator.
+You are given a sample calculator function in the resources [calculator.js](resources/calculator.js). Write unit tests covering the functionality of the calculator.
 
 ## Instructions
 
