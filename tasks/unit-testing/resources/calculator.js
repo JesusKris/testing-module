@@ -4,8 +4,8 @@ class Calculator {
         return typeof num === "number" ? true : false
     }
 
-    _validateInput(...numbers) {
-        numbers.forEach((num) => {
+    _validateInput(...input) {
+        input.forEach((num) => {
             if (!this._isNum(num)) {
                 throw Error("Wrong data type as an argument. Only numbers are allowed!")
             }
