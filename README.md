@@ -19,7 +19,7 @@ Addressing this issue is crucial to empower kood/Jõhvi students with the necess
 
 ## Solution
 
-This module on software testing should be taken early on, so that students benefit from the acquired skills in future modules (BE, FE, etc).  By the time the student gets to this, they will have been through the “piscine” and they will know basic data types, data manipulation, looping.
+This module on software testing should be taken early on, so that students benefit from the acquired skills in future modules. By the time the student gets to this, they will have been through the “piscine” and they will know basic data types, data manipulation, looping.
 
 The module should be about 3-4 weeks, and contain maybe 4-7 tasks.
 
@@ -29,14 +29,10 @@ The learnings should be practical - tools that companies actually use.
 ## Accomplishments
 - scoped the module and what should be included
 - scoped tasks that could be used for learning
-- practice pitching :)
-
-
-## Lessons learned
-##### **to be added**
+- practiced pitching :)
 
 ## Roadmap
-##### **to be added**
+- Improve and expand the current tasks and ideas to be fully fleshed out
 
 
 ## Authors
