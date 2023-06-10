@@ -1,78 +1,102 @@
-class Calculator {
+class UserInput {
 
-    _isNum(num) {
-        return typeof num === "number" ? true : false
+    #input;
+
+    /**
+     * @param {number} input
+     */
+    constructor(input) {
+        if (!this._containsOnlyNumbers(input)) {
+            throw Error(`${input} is not a number. Only numbers are allowed!`)
+        }
+
+        this.#input = input;
     }
 
-    _validateInput(...input) {
-        input.forEach((num) => {
-            if (!this._isNum(num)) {
-                throw Error("Wrong data type as an argument. Only numbers are allowed!")
+    _containsOnlyNumbers(input) {
+        return typeof input === "number"
+    }
+
+    /**
+     * @returns {number}
+     */
+    get value() {
+        return this.#input
+    }
+}
+
+class Calculator {
+
+    ensureAreUserInstances(...input) {
+        input.forEach((value) => {
+            if (!(value instanceof UserInput)) {
+                throw new Error(`${value} is not an instance of UserInput. Only instance of UserInput is allowed.`)
             }
         })
     }
 
     /**
      * Adds two numbers
-     * @param {number} num1
-     * @param {number} num2
-     * @returns {number | error}
-     */
-    add(num1, num2) {
-        this._validateInput(num1, num2)
-
-        return num1 + num2;
+     * @param {UserInput} addendOne
+     * @param {UserInput} addendTwo
+     * @returns {number | error} sum | error
+    */
+    add(addendOne, addendTwo) {
+        this.ensureAreUserInstances(addendOne, addendTwo)
+        return addendOne.value + addendTwo.value;
     }
 
     /**
      * Subtracts two numbers
-     * @param {number} num1
-     * @param {number} num2
-     * @returns {number | error}
+     * @param {UserInput} minuend
+     * @param {UserInput} subtrahend
+     * @returns {number | error} difference | error
      */
-    subtract(num1, num2) {
-        this._validateInput(num1, num2)
-
-        return num1 - num2;
+    subtract(minuend, subtrahend) {
+        this.ensureAreUserInstances(minuend, subtrahend)
+        return new UserInput(minuend).value - new UserInput(subtrahend).value;
     }
 
     /**
      * Multiplies two numbers
-     * @param {number} num1
-     * @param {number} num2
-     * @returns {number | error}
+     * @param {UserInput} multiplicandOne
+     * @param {UserInput} multiplicandTwo
+     * @returns {number | error} product | error
     */
-    multiply(num1, num2) {
-        this._validateInput(num1, num2)
-
-        return num1 * num2;
+    multiply(multiplicandOne, multiplicandTwo) {
+        this.ensureAreUserInstances(multiplicandOne, multiplicandTwo)
+        return multiplicandOne.value * multiplicandTwo.value;
     }
 
     /**
      * Divides two numbers
-     * @param {number} num1
-     * @param {number} num2
-     * @returns {(number | error)}
+     * @param {UserInput} dividend
+     * @param {UserInput} divisor
+     * @returns {(number | error)} quotient | error
     */
-    divide(num1, num2) {
-        this._validateInput(num1, num2)
+    divide(dividend, divisor) {
+        this.ensureAreUserInstances(dividend, divisor)
 
-        if (num2 === 0) {
-            throw new Error("Cannot divde by zero!");
+        if (divisor.value === 0) {
+            throw new Error("Cannot divde by zero.");
         }
 
-        return num1 / num2;
+        return dividend.value / divisor.value;
     }
 
     /**
      * Remainder of division 
-     * @param {number} num1
-     * @param {number} num2
-     * @returns {number | error}
+     * @param {UserInput} dividend
+     * @param {UserInput} divisor
+     * @returns {number | error} remainder | error
      */
-    remainder(num1, num2) {
-        this._validateInput(num1, num2)
+    remainder(dividend, divisor) {
+        this.ensureAreUserInstances(dividend, divisor)
 
-        return num1 % num2;
+        if (divisor.value === 0) {
+            throw new Error("Cannot divde by zero.");
+        }
+
+        return dividend.value % divisor.value;
     }
 }
