@@ -1,4 +1,4 @@
-class UserInput {
+export class UserInput {
 
     #input;
 
@@ -25,7 +25,7 @@ class UserInput {
     }
 }
 
-class Calculator {
+export class Calculator {
 
     _ensureAreUserInstances(...input) {
         input.forEach((value) => {
@@ -54,7 +54,7 @@ class Calculator {
      */
     subtract(minuend, subtrahend) {
         this._ensureAreUserInstances(minuend, subtrahend)
-        return new UserInput(minuend).value - new UserInput(subtrahend).value;
+        return minuend.value - subtrahend.value;
     }
 
     /**
