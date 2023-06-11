@@ -27,7 +27,7 @@ class UserInput {
 
 class Calculator {
 
-    ensureAreUserInstances(...input) {
+    _ensureAreUserInstances(...input) {
         input.forEach((value) => {
             if (!(value instanceof UserInput)) {
                 throw new Error(`${value} is not an instance of UserInput. Only instance of UserInput is allowed.`)
@@ -42,7 +42,7 @@ class Calculator {
      * @returns {number | error} sum | error
     */
     add(addendOne, addendTwo) {
-        this.ensureAreUserInstances(addendOne, addendTwo)
+        this._ensureAreUserInstances(addendOne, addendTwo)
         return addendOne.value + addendTwo.value;
     }
 
@@ -53,7 +53,7 @@ class Calculator {
      * @returns {number | error} difference | error
      */
     subtract(minuend, subtrahend) {
-        this.ensureAreUserInstances(minuend, subtrahend)
+        this._ensureAreUserInstances(minuend, subtrahend)
         return new UserInput(minuend).value - new UserInput(subtrahend).value;
     }
 
@@ -64,7 +64,7 @@ class Calculator {
      * @returns {number | error} product | error
     */
     multiply(multiplicandOne, multiplicandTwo) {
-        this.ensureAreUserInstances(multiplicandOne, multiplicandTwo)
+        this._ensureAreUserInstances(multiplicandOne, multiplicandTwo)
         return multiplicandOne.value * multiplicandTwo.value;
     }
 
@@ -75,7 +75,7 @@ class Calculator {
      * @returns {(number | error)} quotient | error
     */
     divide(dividend, divisor) {
-        this.ensureAreUserInstances(dividend, divisor)
+        this._ensureAreUserInstances(dividend, divisor)
 
         if (divisor.value === 0) {
             throw new Error("Cannot divde by zero.");
@@ -91,7 +91,7 @@ class Calculator {
      * @returns {number | error} remainder | error
      */
     remainder(dividend, divisor) {
-        this.ensureAreUserInstances(dividend, divisor)
+        this._ensureAreUserInstances(dividend, divisor)
 
         if (divisor.value === 0) {
             throw new Error("Cannot divde by zero.");
