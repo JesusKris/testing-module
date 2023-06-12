@@ -16,13 +16,13 @@
 
 #### Functional
 
-###### Are you able to verify that the student has not changed anything inside **calculator.js** file?
+###### Are you able to verify that the student has not changed anything inside the given application file?
 
 ###### Are you able to verify that the student has written 2 unit tests per public method: happy & unhappy path? Totallying at 12 tests.
 
 ###### Has the student used Jest's describe method?
 
-###### Does the students filesystem matches this:
+###### Does the students filesystem match this:
 ```
 ...
 -- src
