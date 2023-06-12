@@ -12,10 +12,15 @@ Upon completion of this task, students will achieve the following learning outco
 
 ## Introduction
 
-TODO: theoretical intro
-- Why is testing important?
-- What kinds of testing exist and hy (unit, integration, e2e), when to use which
-- What are unit tests
+Welcome to the module on software testing. In this module, we will explore the fundamental concepts of testing and its significance in software development. Testing plays a crucial role in ensuring the quality, reliability, and robustness of software applications. Through a series of lessons and practical exercises, you will gain a comprehensive understanding of different testing approaches and techniques.
+
+Testing is an integral part of the software development lifecycle as it helps in identifying defects, verifying functionality, and ensuring that the software meets the desired requirements. By conducting thorough testing, we can detect and fix issues early, leading to higher-quality software and a more positive user experience. Testing also helps in reducing risks, enhancing maintainability, and building confidence in the software.
+
+There are various types of testing methodologies that serve different purposes throughout the software development process. Some common types of testing include unit testing, integration testing, end-to-end testing, and acceptance testing. In this module, we will primarily focus on unit testing, integration testing and end-to-end testing.
+
+Unit testing involves testing individual units or components of the software to ensure they function as expected. These units can be functions, methods, classes, or modules. Unit tests are typically written by developers and are focused on testing the smallest testable parts of the codebase. They help identify bugs, validate behavior, and provide a level of confidence in the correctness of the units being tested.
+
+During unit testing, we create test cases that cover different scenarios and edge cases, including both positive (happy path) and negative (unhappy path) scenarios. By thoroughly testing each unit, we can catch errors early and ensure that the units perform as intended.
 
 ## Objectives
 
