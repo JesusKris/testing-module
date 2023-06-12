@@ -26,11 +26,11 @@ The provided calculator application has been designed with [testability](https:/
 ## Instructions
 - You are prohibited from changing the given application
 - You must reach <u>100% test coverage</u>
-- You unit tests must follow best practices common to Jest
+- Your unit tests must follow best practices common to Jest
 - Every method must be covered with 2 different unit tests:
   - <u>Happy path</u>   
   - <u>Unhappy path</u>
-- It is good practice to keep components/classes/modules <u>separately</u>, that is why your filesystem must look like this:
+- It is good practice to keep components/classes/modules tests <u>separately</u>, that is why your filesystem must look like this:
 ```
 ...
 -- src
