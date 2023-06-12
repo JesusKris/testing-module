@@ -4,7 +4,7 @@
 
 Upon completion of this task, students will achieve the following learning outcomes:
 
-- Demonstrate the ability to write unit tests utilizing Jest and adhere to established best practices.
+- Demonstrate the ability to write unit tests utilizing Jest and follow established best practices.
 - Comprehend the significance of testing in software development.
 - Gain familiarity with essential concepts such as test coverage, healthy and unhealthy paths.
 - Develop proficiency in organizing testing suites effectively.
@@ -30,9 +30,9 @@ The provided calculator application has been designed with [testability](https:/
 
 ## Instructions
 - You are prohibited from changing the given application
-- You must reach <u>100% test coverage</u>
+- You must reach <u>100% test coverage</u> *(collectCoverageFrom)* 
 - Your unit tests must follow best practices common to Jest
-- Every method must be covered with 2 different unit tests:
+- Every <u>public</u> method must be covered with 2 different unit tests:
   - <u>Happy path</u>   
   - <u>Unhappy path</u>
 - It is good practice to keep components/classes/modules tests <u>separately</u>, that is why your filesystem must look like this:
